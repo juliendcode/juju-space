@@ -7,6 +7,8 @@ import { HomeComponent } from './modules/general/home/home.component';
 import { ContactComponent } from './modules/general/contact/contact.component';
 import { AboutComponent } from './modules/general/about/about.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
+import { AboutModule } from './modules/general/about/about.module';
+import { ContactModule } from './modules/general/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AboutModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
