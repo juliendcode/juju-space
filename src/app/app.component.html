@@ -1,4 +1,52 @@
-<header>
+<nav class="transparent-top navbar navbar-expand-xl bg-dark text-uppercase fixed-top" id="mainNav">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand js-scroll-trigger text-light" href="/#top">
+      <i class="fas fa-laptop-code"></i>
+      space<span class="text-warning">.dev</span>
+    </a>
+    <button
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-warning text-white rounded"
+      data-target="#navbarResponsive"
+      data-toggle="collapse"
+      type="button"
+    >
+      <span class="d-none d-sm-inline">Menu </span><i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mx-0 mx-lg-1">
+          <a
+            routerLink="/"
+            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+            href="/#home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a
+            routerLink="/contact"
+            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+            href="/#contact"
+            >Contact</a
+          >
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a
+            routerLink="/about"
+            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+            href="/#portfolio"
+            >About</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <header>
   <section>
     <h1>Welcome to {{ title }}!</h1>
     <p>
@@ -10,7 +58,9 @@
     <li><a routerLink="/contact">Contact</a></li>
     <li><a routerLink="/about">About</a></li>
   </nav>
-</header>
+</header> -->
 <main>
-  <router-outlet></router-outlet>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
 </main>

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  application: {
+    name: 'space',
+    angular: 'Angular 8.0.1',
+    bootstrap: 'Bootstrap 4.3.1'
+  }
 };
 
 /*
