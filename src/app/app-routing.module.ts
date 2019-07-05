@@ -8,6 +8,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contact', loadChildren: './modules/general/contact/contact.module#ContactModule' },
   { path: 'about', loadChildren: './modules/general/about/about.module#AboutModule' },
+  {
+    path: 'items',
+    loadChildren: './modules/application/items/items.module#ItemsModule'
+  },
   { path: '**', component: NotFoundComponent }
 ];
 
