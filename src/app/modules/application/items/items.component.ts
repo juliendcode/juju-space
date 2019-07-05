@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsService } from './items.service';
 
 @Component({
   selector: 'app-items',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  items: any;
+  constructor(private itemsService: ItemsService) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  getUsers() {
+    this.itemsService.getItems('https://jsonplaceholder.typicode.com/users').subscribe(items => {
+      this.items = items;
+    });
   }
-
 }
