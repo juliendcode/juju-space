@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://5d20d32d427da8f5689fb315--distracted-tesla-335b9f.netlify.com/sitemap.xml
