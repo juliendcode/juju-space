@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   application: {
     name: 'space',
-    angular: 'Angular 8.0.1',
+    angular: 'Angular 8.1.1',
     bootstrap: 'Bootstrap 4.3.1'
   }
 };
