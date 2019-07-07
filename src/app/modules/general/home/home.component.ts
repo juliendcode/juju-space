@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -15,18 +15,18 @@ export class HomeComponent implements OnInit {
   bootstrap = environment.application.bootstrap;
 
   constructor(private meta: Meta,
-              private titleService: Title) { }
+    private titleService: Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Angular-ganatan : Une application Progressive WebApp développée avec Angular');
+    this.titleService.setTitle('Angular-space : Une application Progressive WebApp développée avec Angular');
     this.meta.addTag({
       name: 'angular-webapp',
-      content: 'danny ganatan'
+      content: 'julien-space'
     });
     this.meta.updateTag(
       {
         name: 'description',
-        content: 'Cette application a été développée avec angular version 8.0.0 et bootstrap ' +
+        content: 'Cette application a été développée avec angular version 8.1.0 et bootstrap ' +
           ' Elle applique le Routing, le Lazy loading, le Server side rendering et les Progressive Web App (PWA)'
       });
   }
