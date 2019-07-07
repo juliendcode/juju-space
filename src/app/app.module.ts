@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { JuAutocompleteLibModule } from 'ju-autocomplete-lib';
 import { Feature3Module } from './modules/application/feature3/feature3.module';
 
 
@@ -14,7 +13,6 @@ import { Feature3Module } from './modules/application/feature3/feature3.module';
   imports: [
     AppRoutingModule,
     HttpClientModule,
-    JuAutocompleteLibModule,
     Feature3Module
   ],
   providers: [],

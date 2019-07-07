@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Feature3Component implements OnInit {
 
+  selectedItem = '';
+  onSlectedCountry(selectedItem) {
+    this.selectedItem = selectedItem;
+  }
   constructor() { }
 
   ngOnInit() {

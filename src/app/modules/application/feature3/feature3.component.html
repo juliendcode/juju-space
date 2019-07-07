@@ -1,1 +1,10 @@
 <p>feature3 works!</p>
+
+<ju-ju-autocomplete-lib
+  placeholder="put your country here"
+  (selectedAddress)="onSlectedCountry($event)"
+>
+</ju-ju-autocomplete-lib>
+<br />
+<p>You selected : {{ selectedItem }}</p>
+<hr />

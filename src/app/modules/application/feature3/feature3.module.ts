@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { Feature3RoutingModule } from './feature3-routing.module';
 import { Feature3Component } from './feature3.component';
+import { JuAutocompleteLibModule } from 'ju-autocomplete-lib';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    Feature3RoutingModule
+    Feature3RoutingModule,
+    JuAutocompleteLibModule
   ],
   exports: [
     Feature3Component
