@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   bootstrap = environment.application.bootstrap;
 
   constructor(private meta: Meta,
-    private titleService: Title) { }
+              private titleService: Title) { }
 
   ngOnInit() {
     this.titleService.setTitle('Angular-space : Une application Progressive WebApp développée avec Angular');

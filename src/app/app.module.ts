@@ -9,7 +9,7 @@ import { Feature3Module } from './modules/application/feature3/feature3.module';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent,],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
     AppRoutingModule,
     HttpClientModule,
