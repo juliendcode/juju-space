@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Space": {
+    "browserApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -15,9 +15,9 @@
           "options": {
             "outputPath": "dist/browser",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/main.browser.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.browser.json",
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
             "styles": [
               "src/styles.css",
@@ -112,7 +112,7 @@
             }
           }
         },
-        "server": {
+        "serverApp": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
@@ -128,15 +128,13 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true,
+              "outputHashing": "none"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Space"
+  "defaultProject": "browserApp"
 }
