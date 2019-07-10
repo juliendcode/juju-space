@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "browserApp": {
+    "Space": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -112,7 +112,7 @@
             }
           }
         },
-        "serverApp": {
+        "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
