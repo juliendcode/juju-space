@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: './modules/application/items/items.module#ItemsModule'
   },
   {
+    path: 'news',
+    loadChildren: './modules/application/news/news.module#NewsModule'
+  },
+  {
     path: 'feature3',
     loadChildren: './modules/application/feature3/feature3.module#Feature3Module'
   },
