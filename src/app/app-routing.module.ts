@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: './modules/application/news/news.module#NewsModule'
   },
   {
+    path: 'nasa',
+    loadChildren: './modules/application/nasa/nasa.module#NasaModule'
+  },
+  {
     path: 'feature3',
     loadChildren: './modules/application/feature3/feature3.module#Feature3Module'
   },
