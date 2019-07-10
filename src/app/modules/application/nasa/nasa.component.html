@@ -1,1 +1,32 @@
-<p>nasa works!</p>
+<div class="container">
+  <div class="row ">
+    <div class="card-columns">
+      <div class="card" *ngFor="let photo of photos">
+        <img class="card-img-top img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"  src="{{ photo.url }}" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ photo.title }}</h5>
+          <p class="card-text">{{ photo.explanation | slice: 0:250 }}</p>
+          <p class="card-text">
+            <small class="text-muted">Created {{ photo.date }} &copy;{{ photo.copyright }}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card" *ngFor="let photo of photos">
+    <img class="card-img-top" src="{{ photo.url }}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ photo.title }}</h5>
+      <p class="card-text">{{ photo.explanation | slice: 0:250 }}</p>
+      <p class="card-text">
+        <small class="text-muted">Created {{ photo.date }} &copy;{{ photo.copyright }}</small>
+      </p>
+    </div>
+  </div> -->
+
+  <!--
+<div *ngIf="photos === null">
+  <h3>There were no photos taken by the camera.</h3>
+</div> -->
+</div>
