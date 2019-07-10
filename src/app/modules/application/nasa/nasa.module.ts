@@ -6,13 +6,14 @@ import { NasaComponent } from './nasa.component';
 import { NasaapiService } from './nasaapi.service';
 
 
+
 @NgModule({
-  declarations: [NasaComponent],
+  declarations: [NasaComponent, ],
   imports: [
     CommonModule,
     NasaRoutingModule
   ],
   exports: [NasaComponent],
-  providers: [NasaapiService]
+  providers: [NasaapiService, ]
 })
 export class NasaModule { }

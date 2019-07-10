@@ -8,13 +8,17 @@ import { ApodResponse } from './apod-respponse';
   templateUrl: './nasa.component.html',
   styleUrls: ['./nasa.component.css']
 })
-export class NasaComponent {
+export class NasaComponent implements OnInit {
+  private bodyText: string;
 
   response = new BehaviorSubject<ApodResponse[]>([]);
   headers = [];
   photos = [];
 
-  constructor(private nasaApiService: NasaapiService) {
+  constructor(
+    private nasaApiService: NasaapiService,
+  ) {
+
     this.nasaApiService.getAPODImage()
       .subscribe(resp => {
         // display its headers
@@ -26,9 +30,11 @@ export class NasaComponent {
           this.response.next(resp.body[key]);
           this.photos.push(resp.body[key]);
         });
+        console.log(resp)
 
       });
-
   }
+  ngOnInit() { }
 
 }
+

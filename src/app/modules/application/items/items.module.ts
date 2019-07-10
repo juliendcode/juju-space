@@ -7,8 +7,8 @@ import { ItemsService } from './items.service';
 
 @NgModule({
   declarations: [ItemsComponent],
-  imports: [CommonModule, ItemsRoutingModule, ],
+  imports: [CommonModule, ItemsRoutingModule,],
   exports: [ItemsComponent],
   providers: [ItemsService]
 })
-export class ItemsModule {}
+export class ItemsModule { }

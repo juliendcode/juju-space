@@ -1,11 +1,78 @@
 <div class="container">
   <div class="row ">
     <div class="card-columns">
+      <div *ngFor="let photo of photos" class="card promoting-card">
+        <div class="card-body d-flex flex-row">
+          <img
+            src="{{ photo.url }}"
+            class="rounded-circle mr-3"
+            height="50px"
+            width="50px"
+            alt="avatar"
+          />
+
+          <div>
+            <h4 class="card-title font-weight-bold mb-2">{{ photo.title }}</h4>
+            <p class="card-text"><i class="far fa-clock pr-2"></i>{{ photo.date }}</p>
+          </div>
+        </div>
+
+        <div class="view overlay">
+          <img class="card-img-top rounded-0" src="{{ photo.url }}" alt="Card image cap" />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <div class="card-body">
+          <div class="collapse-content">
+            <p class="card-text collapse" id="collapseContent">
+              {{ photo.explanation }}
+            </p>
+            <button
+              class="btn btn-outline-success my-1 mr-0 mml-1 collapsed"
+              data-toggle="collapse"
+              href="#collapseContent"
+              aria-expanded="true"
+              aria-controls="collapseContent"
+            >
+              More
+            </button>
+
+            <i
+              class="fas fa-share-alt text-muted float-right p-1 my-1"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Share this post"
+            ></i>
+            <i
+              class="fas fa-heart text-muted float-right p-1 my-1 mr-3"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="I like it"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+
+    <!-- <div class="container">
+  <div class="row ">
+    <div class="card-columns col-lg-4 d-flex align-items-stretch">
       <div class="card" *ngFor="let photo of photos">
-        <img class="card-img-top img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"  src="{{ photo.url }}" alt="Card image cap" />
+        <img
+          class="card-img-top img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+          src="{{ photo.url }}"
+          alt="Card image cap"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ photo.title }}</h5>
-          <p class="card-text">{{ photo.explanation | slice: 0:250 }}</p>
+
+
+          <p class="card-text">{{ photo.explanation | slice: 0:250 }}...</p>
+
           <p class="card-text">
             <small class="text-muted">Created {{ photo.date }} &copy;{{ photo.copyright }}</small>
           </p>
@@ -13,20 +80,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="card" *ngFor="let photo of photos">
-    <img class="card-img-top" src="{{ photo.url }}" alt="Card image cap" />
-    <div class="card-body">
-      <h5 class="card-title">{{ photo.title }}</h5>
-      <p class="card-text">{{ photo.explanation | slice: 0:250 }}</p>
-      <p class="card-text">
-        <small class="text-muted">Created {{ photo.date }} &copy;{{ photo.copyright }}</small>
-      </p>
-    </div>
-  </div> -->
-
-  <!--
-<div *ngIf="photos === null">
-  <h3>There were no photos taken by the camera.</h3>
 </div> -->
+  </div>
 </div>
